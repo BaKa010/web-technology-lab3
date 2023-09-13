@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User Finder</title>
+    <!-- Add Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Background container for the overlay -->
+    <div class="background-container">
+        <div class="overlay"></div>
+    </div>
+    
+    <!-- Display API limit information -->
+    <div class="api-limit" id="api-limit">
+        <p>API requests remaining: <span id="remaining-requests">N/A</span></p>
+        <p>Reset time: <span id="reset-time">N/A</span></p>
+    </div>
+    
+    <!-- Page heading for GitHub User Search -->
+    <h1 class="page-heading">GitHub User Search</h1>
+    
+    <!-- User input form -->
+    <form class="user-form" id="form">
+        <div class="input-group">
+            <input type="text" id="search" class="form-control" placeholder="Search a Github User">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <!-- Display user information -->
+    <div class="card hidden" id="card">
+        <div class="user-info">
+            <h2></h2>
+            <p></p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Followers:</strong> <span></span></li>
+                <li class="list-group-item"><strong>Following:</strong> <span></span></li>
+                <li class="list-group-item"><strong>Repos:</strong> <span></span></li>
+            </ul>
+
+            <div id="repos"></div>
+        </div>
+
+        <div>
+            <img src="" alt="User Avatar" class="avatar img-fluid">
+        </div>
+    </div>
+
+    <!-- link JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
